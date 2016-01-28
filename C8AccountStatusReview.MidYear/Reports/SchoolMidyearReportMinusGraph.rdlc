@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>8.055in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>10.33208in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="Rectangle1">
+                      <ReportItems>
+                        <Textbox Name="ClientName">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="Midyear Status Report:  " + Fields!SchoolName.Value + " " + Fields!CurrentSchoolYearTitle.Value</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ClientName</rd:DefaultName>
+                          <Top>0.86556in</Top>
+                          <Left>0.49875in</Left>
+                          <Height>0.29167in</Height>
+                          <Width>7.28958in</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Image Name="Activate">
+                          <Source>Embedded</Source>
+                          <Value>logo</Value>
+                          <Sizing>FitProportional</Sizing>
+                          <Top>0.43972in</Top>
+                          <Left>6.26875in</Left>
+                          <Height>0.38417in</Height>
+                          <Width>1.51958in</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
+                        <Textbox Name="ClientName1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="The purpose of this report is to update you on the progress at " + Fields!SchoolName.Value +"."</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ClientName1</rd:DefaultName>
+                          <Top>1.22667in</Top>
+                          <Left>0.49875in</Left>
+                          <Height>0.28125in</Height>
+                          <Width>7.48958in</Width>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Subreport Name="Subreport1">
+                          <ReportName>StatsChart</ReportName>
+                          <Parameters>
+                            <Parameter Name="SchoolId">
+                              <Value>=Fields!SchoolId.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>1.57737in</Top>
+                          <Left>0.52375in</Left>
+                          <Height>2.24431in</Height>
+                          <Width>2.09375in</Width>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Subreport Name="CognitiveReportsUnlocked">
+                          <ReportName>CognitiveReportsUnlocked</ReportName>
+                          <Parameters>
+                            <Parameter Name="SchoolId">
+                              <Value>=Fields!SchoolId.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>1.57737in</Top>
+                          <Left>2.99666in</Left>
+                          <Height>2.24431in</Height>
+                          <Width>2.09375in</Width>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Subreport Name="StudentsOnTrack">
+                          <ReportName>StudentsOnTrack</ReportName>
+                          <Parameters>
+                            <Parameter Name="SchoolId">
+                              <Value>=Fields!SchoolId.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>1.57737in</Top>
+                          <Left>5.49458in</Left>
+                          <Height>2.24431in</Height>
+                          <Width>2.09375in</Width>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Cognitive Data Delivered:</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>This year, ACTIVATE provided your educators with regular reports about their students' cognitive strengths and weaknesses, along with custom resources and tips for helping students succeed.</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>3.95709in</Top>
+                          <Left>0.51542in</Left>
+                          <Height>0.72916in</Height>
+                          <Width>7.51458in</Width>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Subreport Name="CognitiveWeaknesses">
+                          <ReportName>CognitiveWeaknesses</ReportName>
+                          <Parameters>
+                            <Parameter Name="SchoolId">
+                              <Value>=Fields!SchoolId.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>5.31471in</Top>
+                          <Left>0.52375in</Left>
+                          <Height>1.89584in</Height>
+                          <Width>7.48958in</Width>
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Textbox Name="Textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Which cognitive weaknesses were identified most often?</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>As soon as ACTIVATE detects early markers of a cognitive weakness, an alert is sent to the teacher. These alerts include tips and resources for addressing the weaknesses.</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Top>4.72792in</Top>
+                          <Left>0.49875in</Left>
+                          <Height>0.42013in</Height>
+                          <Width>7.50625in</Width>
+                          <ZIndex>8</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Subreport Name="LeadingCohorts">
+                          <ReportName>LeadingCohorts</ReportName>
+                          <Parameters>
+                            <Parameter Name="SchoolId">
+                              <Value>=Fields!SchoolId.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>8.08624in</Top>
+                          <Left>0.49875in</Left>
+                          <Height>1.23959in</Height>
+                          <Width>7.48958in</Width>
+                          <ZIndex>9</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Textbox Name="Textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Your Leading Cohorts:</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Which cohorts completed the most sessions? Which performed the highest in </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>comparison </Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>to others of the same age? </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Top>7.37096in</Top>
+                          <Left>0.49875in</Left>
+                          <Height>0.53125in</Height>
+                          <Width>7.48958in</Width>
+                          <ZIndex>10</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>*</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value> "On Pace" means students completing an average of at least 40 minutes per week.          </Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>**</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value> Averages are per student</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Top>9.38in</Top>
+                          <Left>0.49042in</Left>
+                          <Height>0.25in</Height>
+                          <Width>7.49791in</Width>
+                          <ZIndex>11</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details" />
+              <FixedData>true</FixedData>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Height>10.33208in</Height>
+        <Width>8.055in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>10.35291in</Height>
+    <Style />
+  </Body>
+  <Width>8.055in</Width>
+  <Page>
+    <PageFooter>
+      <Height>0.39583in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Copyright ©2016 C8 Sciences  c8sciences.com</Value>
+                  <MarkupType>HTML</MarkupType>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>#3f95d1</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value> Questions? support@c8sciences.com</Value>
+                  <MarkupType>HTML</MarkupType>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>#3f95d1</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Left>0.49042in</Left>
+          <Height>0.37084in</Height>
+          <Width>7.56458in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <BottomMargin>0.2in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="C8AccountStatusReviewMidYearModels">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>a48b123a-21bd-42d1-b797-ad33c5eaa62e</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>C8AccountStatusReviewMidYearModels</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CurrentSchoolYearTitle">
+          <DataField>CurrentSchoolYearTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EarlyWaringsIssued">
+          <DataField>EarlyWaringsIssued</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SchoolId">
+          <DataField>SchoolId</DataField>
+          <rd:TypeName>System.Guid</rd:TypeName>
+        </Field>
+        <Field Name="SchoolName">
+          <DataField>SchoolName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WeeklyReportsDelivered">
+          <DataField>WeeklyReportsDelivered</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>C8AccountStatusReview.MidYear.Models</rd:DataSetName>
+        <rd:TableName>ParentModel</rd:TableName>
+        <rd:ObjectDataSourceType>C8AccountStatusReview.MidYear.Models.ParentModel, C8AccountStatusReview.MidYear, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>52602aaa-3332-4713-9d85-bcd2b4d71456</rd:ReportID>
+</Report>

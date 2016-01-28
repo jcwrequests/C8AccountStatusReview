@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C8AccountStatusReview.MidYear", "C8AccountStatusReview.MidYear\C8AccountStatusReview.MidYear.csproj", "{881D5CEA-CF5A-4821-8CBE-1A6CAB8FA53A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C8AccountStatusReview.Runner", "C8AccountStatusReview.Runner\C8AccountStatusReview.Runner.csproj", "{2A471D64-B382-47C1-8A19-6C3BE490D047}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{881D5CEA-CF5A-4821-8CBE-1A6CAB8FA53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881D5CEA-CF5A-4821-8CBE-1A6CAB8FA53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881D5CEA-CF5A-4821-8CBE-1A6CAB8FA53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881D5CEA-CF5A-4821-8CBE-1A6CAB8FA53A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A471D64-B382-47C1-8A19-6C3BE490D047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A471D64-B382-47C1-8A19-6C3BE490D047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A471D64-B382-47C1-8A19-6C3BE490D047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A471D64-B382-47C1-8A19-6C3BE490D047}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
